@@ -1,6 +1,8 @@
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MiwiZXhwIjoxNjM0NDk0NTI1fQ.zAzA1U-vefuCEc3UP8ekqVLFFJsuFj0jM1BMbPwvNsU
 @hostname = http://localhost:3000
 
+######################################### DJS
+
 ### DJs create (signup)
 POST {{hostname}}/djs
 Authorization: Bearer {{jwt}}
@@ -39,6 +41,39 @@ Authorization: Bearer {{jwt}}
 ### DJ destroy
 
 DELETE {{hostname}}/djs/1
+
+#################################### REQUESTS
+
+### Requests Index
+
+GET {{hostname}}/requests
+
+
+### Request create
+POST {{hostname}}/requests
+Content-Type: application/json
+
+  {
+    "song": "A Milli by Lil Wayne",
+    "comments": "Thank you!"
+  }
+
+### Requests update
+
+PATCH {{hostname}}/requests/4
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "status": "approved"
+}
+
+### Requests destroy
+
+
+
+
+
 
 
 
