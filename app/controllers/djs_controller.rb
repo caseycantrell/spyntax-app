@@ -14,4 +14,9 @@ class DjsController < ApplicationController
     end
   end
 
+  def show
+    dj = Dj.find(params[:id])
+    render json: dj
+  end
+
 end

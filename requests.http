@@ -3,6 +3,7 @@
 
 ### DJ create (signup)
 POST {{hostname}}/djs
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
   {
@@ -11,6 +12,21 @@ Content-Type: application/json
     "password": "dj",
     "password_confirmation": "dj"
   }
+
+### DJ show
+GET http://localhost:3000/djs/2
+
+### DJ update
+
+### DJ destroy
+
+
+
+
+
+
+
+
 
 
 ### Sessions create (login)
