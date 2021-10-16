@@ -20,22 +20,22 @@ GET http://localhost:3000/djs/2
 
 ### DJs update
 
-PATCH {{hostname}}/djs/2
+PATCH {{hostname}}/djs/4
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "name": "test",
-  "email": "test",
-  "info": "test",
-  "website": "test",
-  "image_url": "test", 
-  "instagram": "test", 
-  "twitter": "test",
-  "facebook": "test",
-  "venmo": "test",
-  "cashapp": "test",
-  "paypal": "test"
+  "name": "Casey Rells",
+  "email": "emailcaseyrells@gmail.com",
+  "info": "",
+  "website": "www.caseyrells.com",
+  "image_url": "", 
+  "instagram": "@caseyrells", 
+  "twitter": "",
+  "facebook": "",
+  "venmo": "",
+  "cashapp": "",
+  "paypal": ""
 }
 
 ### DJ destroy
@@ -70,15 +70,13 @@ Authorization: Bearer {{jwt}}
 
 ### Requests destroy
 
+DELETE {{hostname}}/requests/4
 
 
 
 
 
-
-
-
-
+#################################### SESSIONS
 
 ### Sessions create (login)
 
