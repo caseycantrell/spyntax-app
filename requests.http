@@ -1,7 +1,7 @@
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MiwiZXhwIjoxNjM0NDk0NTI1fQ.zAzA1U-vefuCEc3UP8ekqVLFFJsuFj0jM1BMbPwvNsU
 @hostname = http://localhost:3000
 
-### DJ create (signup)
+### DJs create (signup)
 POST {{hostname}}/djs
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
@@ -13,16 +13,32 @@ Content-Type: application/json
     "password_confirmation": "dj"
   }
 
-### DJ show
+### DJs show
 GET http://localhost:3000/djs/2
 
-### DJ update
+### DJs update
+
+PATCH {{hostname}}/djs/2
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "name": "test",
+  "email": "test",
+  "info": "test",
+  "website": "test",
+  "image_url": "test", 
+  "instagram": "test", 
+  "twitter": "test",
+  "facebook": "test",
+  "venmo": "test",
+  "cashapp": "test",
+  "paypal": "test"
+}
 
 ### DJ destroy
 
-
-
-
+DELETE {{hostname}}/djs/1
 
 
 
