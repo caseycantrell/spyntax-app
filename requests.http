@@ -16,7 +16,7 @@ Content-Type: application/json
   }
 
 ### DJs show
-GET http://localhost:3000/djs/2
+GET http://localhost:3000/djs/3
 
 ### DJs update
 
