@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   patch "/djs/:id" => "djs#update"
   delete "/djs/:id" => "djs#destroy"
 
-
   get "/requests" => "requests#index"
   post "/requests" => "requests#create"
   patch "/requests/:id" => "requests#update"
@@ -13,6 +12,6 @@ Rails.application.routes.draw do
 
   
   post "/sessions" => "sessions#create"
-  
+
 
 end
