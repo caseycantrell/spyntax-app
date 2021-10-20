@@ -1,9 +1,11 @@
 class RequestsController < ApplicationController
 
+
   def index
     requests = Request.all
     render json: requests
   end
+
 
   def create
     request = Request.new(
@@ -29,6 +31,7 @@ class RequestsController < ApplicationController
       end
   end
 
+  
   def destroy
     request = Request.find_by(id: params[:id])
     request.destroy

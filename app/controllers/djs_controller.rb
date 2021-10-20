@@ -1,5 +1,9 @@
 class DjsController < ApplicationController
 
+
+  # before_action :authenticate_user
+
+
   def create
     dj = Dj.new(
       name: params[:name],
@@ -14,10 +18,12 @@ class DjsController < ApplicationController
     end
   end
 
+
   def show
     dj = Dj.find(params[:id])
     render json: dj
   end
+
 
   def update
     dj = Dj.find(params[:id])
@@ -38,6 +44,7 @@ class DjsController < ApplicationController
       render json: dj.errors.full_messages, status: :unprocessable_entity
       end
   end
+
 
   def destroy
     dj = Dj.find_by(id: params[:id])
