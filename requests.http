@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MiwiZXhwIjoxNjM0NDk0NTI1fQ.zAzA1U-vefuCEc3UP8ekqVLFFJsuFj0jM1BMbPwvNsU
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6OSwiZXhwIjoxNjM1MDA3MzExfQ.kwKjeV0NHADmoBya7COMrfhfYZ7SXNMOWNB0p_sX0k4
 @hostname = http://localhost:3000
 
 ######################################### DJS
@@ -9,10 +9,10 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
   {
-    "name": "New DJ",
-    "email": "dj@dj.com",
-    "password": "dj",
-    "password_confirmation": "dj"
+    "name": "test",
+    "email": "test@test.com",
+    "password": "test",
+    "password_confirmation": "test"
   }
 
 ### DJs show
@@ -20,27 +20,27 @@ GET http://localhost:3000/djs/3
 
 ### DJs update
 
-PATCH {{hostname}}/djs/4
+PATCH {{hostname}}/djs/9
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "name": "Casey Rells",
-  "email": "emailcaseyrells@gmail.com",
-  "info": "",
-  "website": "www.caseyrells.com",
-  "image_url": "", 
-  "instagram": "@caseyrells", 
-  "twitter": "",
-  "facebook": "",
-  "venmo": "",
-  "cashapp": "",
-  "paypal": ""
+  "name": "test",
+  "email": "test",
+  "info": "test",
+  "website": "www.test.com",
+  "image_url": "test", 
+  "instagram": "test", 
+  "twitter": "test",
+  "facebook": "test",
+  "venmo": "test",
+  "cashapp": "test",
+  "paypal": "test"
 }
 
 ### DJ destroy
 
-DELETE {{hostname}}/djs/1
+DELETE {{hostname}}/djs/8
 
 #################################### REQUESTS
 

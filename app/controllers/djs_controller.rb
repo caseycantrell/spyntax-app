@@ -1,7 +1,7 @@
 class DjsController < ApplicationController
 
 
-  # before_action :authenticate_user
+  before_action :authenticate_user, except: [:create]
 
 
   def create
