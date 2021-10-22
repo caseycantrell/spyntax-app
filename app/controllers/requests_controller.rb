@@ -1,8 +1,9 @@
 class RequestsController < ApplicationController
 
+  before_action :authenticate_dj, except: [:index, :create]
 
   def index
-    requests = Request.all
+    requests = Request.where(dj_id: params[:dj_id])
     render json: requests
   end
 
@@ -15,7 +16,7 @@ class RequestsController < ApplicationController
       status: "pending"
     )
     if request.save
-      render json: { message: "Successfully Requested!" }, status: :created
+      render json: request
     else
       render json: { errors: request.errors.full_messages }, status: :bad_request
     end
@@ -23,7 +24,7 @@ class RequestsController < ApplicationController
 
 
   def update
-    request = Request.find(params[:id])
+    request = current_dj.requests.find(params[:id])
     request.status = params[:status] || request.status
       if request.save
       render json: request
@@ -34,8 +35,7 @@ class RequestsController < ApplicationController
 
   
   def destroy
-    request = Request.find_by(id: params[:id])
-    request.destroy
+    current_dj.requests.destroy_all
     render json: { message: "Successfully obliterated." }
   end
 

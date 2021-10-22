@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MTUsImV4cCI6MTYzNTAxMzYyNn0.QO-RfM-9eALFVEc9qlmAKY_p03KprboEc1-yICn2hjg
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MiwiZXhwIjoxNjM1MDE2MTYyfQ.-z-PYM5GwjrS-CsI6cTqiEXMYYF-e8iUDsgFUSZa3_M
 @hostname = http://localhost:3000
 
 ######################################### DJS
@@ -15,21 +15,22 @@ Content-Type: application/json
   }
 
 ### DJs show
-GET http://localhost:3000/djs/5
+GET http://localhost:3000/djs/3
+
 
 ### DJs update
 
-PATCH {{hostname}}/djs/5
+PATCH {{hostname}}/djs/me
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "name": "test",
-  "email": "test@test.com",
+  "name": "DJ Coolboi69",
+  "email": "djcoolboi@gmail.com",
   "info": "test",
-  "website": "www.test.com",
+  "website": "www.coolboi.com",
   "image_url": "test", 
-  "instagram": "test", 
+  "instagram": "@coolboi", 
   "twitter": "test",
   "facebook": "test",
   "venmo": "test",
@@ -39,7 +40,7 @@ Authorization: Bearer {{jwt}}
 
 ### DJ destroy
 
-DELETE {{hostname}}/djs/14
+DELETE {{hostname}}/djs/me
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
@@ -47,7 +48,8 @@ Authorization: Bearer {{jwt}}
 
 ### Requests Index
 
-GET {{hostname}}/requests
+GET {{hostname}}/requests?dj_id=2
+
 
 
 ### Request create
@@ -57,12 +59,12 @@ Content-Type: application/json
   {
     "song": "A Milli by Lil Wayne",
     "comments": "Thank you!",
-    "dj_id": 4
+    "dj_id": 2
   }
 
 ### Requests update
 
-PATCH {{hostname}}/requests/2
+PATCH {{hostname}}/requests/4
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
@@ -72,8 +74,9 @@ Authorization: Bearer {{jwt}}
 
 ### Requests destroy
 
-DELETE {{hostname}}/requests/2
-
+DELETE {{hostname}}/requests/all
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 #################################### SESSIONS
 
@@ -83,10 +86,10 @@ POST {{hostname}}/sessions
 Content-Type: application/json
 
   {
-    "email": "test@test.com",
-    "password": "test"
+    "email": "emailcaseyrells@gmail.com",
+    "password": "quincyboi"
   }
 
 #################################### QR code request
 
-GET http://api.qrserver.com/v1/create-qr-code/?data=www.caseycantrell.com&size=500x500&margin=20&bgcolor=00f&color=fff&ecc=H
+GET http://api.qrserver.com/v1/create-qr-code/?data=www.caseycantrell.com&size=500x500&margin=20&bgcolor=000&color=fff&ecc=H

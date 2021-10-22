@@ -14,19 +14,19 @@ class DjsController < ApplicationController
     if dj.save
       render json: dj
     else
-      render json: { errors: dj.errors.full_messages }, status: :bad_request
+      render json: { errors: dj.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
 
   def show
     dj = Dj.find(params[:id])
-    render json: dj
+      render json: dj
   end
 
-
+  
   def update
-    dj = Dj.find(params[:id])
+    dj = current_dj
     dj.name = params[:name] || dj.name
     dj.info = params[:info] || dj.info
     dj.website = params[:website] || dj.website
@@ -47,7 +47,7 @@ class DjsController < ApplicationController
 
 
   def destroy
-    dj = Dj.find_by(id: params[:id])
+    dj = current_dj
     dj.destroy
     render json: { message: "Successfully DESTROYED!" }
   end
