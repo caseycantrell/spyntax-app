@@ -61,12 +61,12 @@ Content-Type: application/json
 
 ### Requests update
 
-PATCH {{hostname}}/requests/6
+PATCH {{hostname}}/requests/2
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "status": "approved"
+  "status": "declined"
 }
 
 ### Requests destroy
@@ -86,3 +86,8 @@ Content-Type: application/json
     "email": "test@test.com",
     "password": "test"
   }
+
+  
+#################################### QR code request
+
+GET http://api.qrserver.com/v1/create-qr-code/?data=www.caseycantrell.com&size=500x500&margin=20&bgcolor=00f&color=fff&ecc=H
