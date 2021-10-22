@@ -1,26 +1,25 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6OSwiZXhwIjoxNjM1MDA3MzExfQ.kwKjeV0NHADmoBya7COMrfhfYZ7SXNMOWNB0p_sX0k4
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MywiZXhwIjoxNjM1MDEyMzI0fQ.Yy3wkQdcXFlA38LQk-LRfbj1W-o78fum3yYgcvqb4eU
 @hostname = http://localhost:3000
 
 ######################################### DJS
 
 ### DJs create (signup)
 POST {{hostname}}/djs
-Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
   {
     "name": "test",
-    "email": "test@test.com",
+    "email": "test2@test.com",
     "password": "test",
     "password_confirmation": "test"
   }
 
 ### DJs show
-GET http://localhost:3000/djs/3
+GET http://localhost:3000/djs/11
 
 ### DJs update
 
-PATCH {{hostname}}/djs/9
+PATCH {{hostname}}/djs/11
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
@@ -40,7 +39,7 @@ Authorization: Bearer {{jwt}}
 
 ### DJ destroy
 
-DELETE {{hostname}}/djs/8
+DELETE {{hostname}}/djs/9
 
 #################################### REQUESTS
 
@@ -74,7 +73,6 @@ Authorization: Bearer {{jwt}}
 DELETE {{hostname}}/requests/6
 
 
-
 #################################### SESSIONS
 
 ### Sessions create (login)
@@ -83,11 +81,10 @@ POST {{hostname}}/sessions
 Content-Type: application/json
 
   {
-    "email": "test@test.com",
-    "password": "test"
+    "email": "casey@casey.com",
+    "password": "casey"
   }
 
-  
 #################################### QR code request
 
 GET http://api.qrserver.com/v1/create-qr-code/?data=www.caseycantrell.com&size=500x500&margin=20&bgcolor=00f&color=fff&ecc=H
