@@ -11,6 +11,7 @@ class RequestsController < ApplicationController
     request = Request.new(
       song: params[:song],
       comments: params[:comments],
+      dj_id: params[:dj_id],
       status: "pending"
     )
     if request.save

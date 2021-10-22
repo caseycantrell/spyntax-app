@@ -55,12 +55,13 @@ Content-Type: application/json
 
   {
     "song": "A Milli by Lil Wayne",
-    "comments": "Thank you!"
+    "comments": "Thank you!",
+    "dj_id": 4
   }
 
 ### Requests update
 
-PATCH {{hostname}}/requests/4
+PATCH {{hostname}}/requests/6
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
@@ -70,9 +71,7 @@ Authorization: Bearer {{jwt}}
 
 ### Requests destroy
 
-DELETE {{hostname}}/requests/4
-
-
+DELETE {{hostname}}/requests/6
 
 
 
