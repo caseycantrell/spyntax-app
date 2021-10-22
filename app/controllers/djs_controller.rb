@@ -1,7 +1,7 @@
 class DjsController < ApplicationController
 
 
-  before_action :authenticate_user, except: [:create, :show]
+  before_action :authenticate_dj, except: [:create, :show]
 
 
   def create
@@ -12,7 +12,7 @@ class DjsController < ApplicationController
       password_confirmation: params[:password_confirmation]
     )
     if dj.save
-      render json: { message: "Success!" }, status: :created
+      render json: dj
     else
       render json: { errors: dj.errors.full_messages }, status: :bad_request
     end

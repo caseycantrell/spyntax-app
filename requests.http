@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MywiZXhwIjoxNjM1MDEyMzI0fQ.Yy3wkQdcXFlA38LQk-LRfbj1W-o78fum3yYgcvqb4eU
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MTUsImV4cCI6MTYzNTAxMzYyNn0.QO-RfM-9eALFVEc9qlmAKY_p03KprboEc1-yICn2hjg
 @hostname = http://localhost:3000
 
 ######################################### DJS
@@ -9,23 +9,23 @@ Content-Type: application/json
 
   {
     "name": "test",
-    "email": "test2@test.com",
+    "email": "test@test.com",
     "password": "test",
     "password_confirmation": "test"
   }
 
 ### DJs show
-GET http://localhost:3000/djs/11
+GET http://localhost:3000/djs/5
 
 ### DJs update
 
-PATCH {{hostname}}/djs/11
+PATCH {{hostname}}/djs/5
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
   "name": "test",
-  "email": "test",
+  "email": "test@test.com",
   "info": "test",
   "website": "www.test.com",
   "image_url": "test", 
@@ -39,7 +39,9 @@ Authorization: Bearer {{jwt}}
 
 ### DJ destroy
 
-DELETE {{hostname}}/djs/9
+DELETE {{hostname}}/djs/14
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 #################################### REQUESTS
 
@@ -70,7 +72,7 @@ Authorization: Bearer {{jwt}}
 
 ### Requests destroy
 
-DELETE {{hostname}}/requests/6
+DELETE {{hostname}}/requests/2
 
 
 #################################### SESSIONS
@@ -81,8 +83,8 @@ POST {{hostname}}/sessions
 Content-Type: application/json
 
   {
-    "email": "casey@casey.com",
-    "password": "casey"
+    "email": "test@test.com",
+    "password": "test"
   }
 
 #################################### QR code request
