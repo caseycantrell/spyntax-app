@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MiwiZXhwIjoxNjM1MDE2MTYyfQ.-z-PYM5GwjrS-CsI6cTqiEXMYYF-e8iUDsgFUSZa3_M
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MiwiZXhwIjoxNjM1MTI0MjQ1fQ.2D2o_KiCmKnHc36J-lkTbEYZ4eIJxjszZlHguAVnMiE
 @hostname = http://localhost:3000
 
 ######################################### DJS
@@ -10,12 +10,12 @@ Content-Type: application/json
   {
     "name": "test",
     "email": "test@test.com",
-    "password": "test",
-    "password_confirmation": "test"
+    "password": "password",
+    "password_confirmation": "password"
   }
 
 ### DJs show
-GET http://localhost:3000/djs/3
+GET http://localhost:3000/djs/2
 
 
 ### DJs update
@@ -30,6 +30,7 @@ Authorization: Bearer {{jwt}}
   "info": "test",
   "website": "www.coolboi.com",
   "image_url": "test", 
+  "qr_code_url": "test", 
   "instagram": "@coolboi", 
   "twitter": "test",
   "facebook": "test",
@@ -48,7 +49,7 @@ Authorization: Bearer {{jwt}}
 
 ### Requests Index
 
-GET {{hostname}}/requests?dj_id=2
+GET {{hostname}}/requests?dj_id=1
 
 
 
