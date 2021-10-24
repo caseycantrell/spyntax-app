@@ -1,6 +1,6 @@
 
-# Dj.create!(name: "casey", email: "casey@casey.com", password: "casey", password_confirmation: "casey")
-# Dj.create!(name: "Casey Rells", email: "emailcaseyrells@gmail.com", password: "quincyboi", password_confirmation: "quincyboi")
+# Dj.create!(name: "casey", email: "casey@casey.com", password: "password", password_confirmation: "password")
+# Dj.create!(name: "Casey Rells", email: "emailcaseyrells@gmail.com", password: "password", password_confirmation: "password")
 
 
 # Request.create!(dj_id: "1", song: "Party Up by DMX", comments: "Thanks for playing this, you're the best DJ ever", status: "approved")
