@@ -10,8 +10,6 @@ Rails.application.routes.draw do
   patch "/requests/:id" => "requests#update"
   delete "/requests/all" => "requests#destroy"
 
-  
   post "/sessions" => "sessions#create"
-
 
 end
