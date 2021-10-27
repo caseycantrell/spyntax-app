@@ -1,8 +1,10 @@
 class RequestsController < ApplicationController
+
   before_action :authenticate_dj, except: [:index, :create]
 
   def index
-    requests = Request.where(dj_id: params[:dj_id])
+    dj = Dj.includes(:requests).find(params[:dj_id])
+    requests = dj.requests.order(:created_at => :desc)
     render json: requests
   end
 
@@ -34,4 +36,5 @@ class RequestsController < ApplicationController
     current_dj.requests.destroy_all
     render json: { message: "Successfully obliterated all requests." }
   end
+
 end

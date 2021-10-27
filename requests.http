@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MiwiZXhwIjoxNjM1MTI0MjQ1fQ.2D2o_KiCmKnHc36J-lkTbEYZ4eIJxjszZlHguAVnMiE
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MiwiZXhwIjoxNjM1MzcxNjI4fQ.J_ymNLcOUsplnNfzR7TRk3fc5UzIorNaiRkVjaSTejQ
 @hostname = http://localhost:3000
 
 ######################################### DJS
