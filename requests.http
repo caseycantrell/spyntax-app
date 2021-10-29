@@ -93,4 +93,4 @@ Content-Type: application/json
 
 #################################### QR code request
 
-GET http://api.qrserver.com/v1/create-qr-code/?data=www.caseycantrell.com&size=500x500&margin=20&bgcolor=000&color=fff&ecc=H
+GET http://api.qrserver.com/v1/create-qr-code/?data=www.djpressplay.com&size=500x500&margin=20&bgcolor=000&color=fff&ecc=H
