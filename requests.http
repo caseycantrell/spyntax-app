@@ -60,7 +60,7 @@ Content-Type: application/json
   {
     "song": "A Milli by Lil Wayne",
     "comments": "Thank you!",
-    "dj_id": 2
+    "dj_id": 5
   }
 
 ### Requests update
@@ -88,7 +88,7 @@ Content-Type: application/json
 
   {
     "email": "emailcaseyrells@gmail.com",
-    "password": "quincyboi"
+    "password": "password"
   }
 
 #################################### QR code request
