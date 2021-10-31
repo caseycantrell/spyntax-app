@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MiwiZXhwIjoxNjM1MzcxNjI4fQ.J_ymNLcOUsplnNfzR7TRk3fc5UzIorNaiRkVjaSTejQ
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MTMsImV4cCI6MTYzNTc5Mzg2NH0.3CZi294xUaZeznrss4bYqRVEL8jv7oN0GD-0EtS96o4
 @hostname = http://localhost:3000
 
 ######################################### DJS
@@ -25,7 +25,7 @@ Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "name": "DJ Coolboi69",
+  "name": "DJ Coolboi",
   "email": "djcoolboi@gmail.com",
   "info": "test",
   "website": "www.coolboi.com",
@@ -87,7 +87,7 @@ POST {{hostname}}/sessions
 Content-Type: application/json
 
   {
-    "email": "emailcaseyrells@gmail.com",
+    "email": "test@test.com",
     "password": "password"
   }
 

@@ -4,7 +4,7 @@ class RequestsController < ApplicationController
 
   def index
     dj = Dj.includes(:requests).find(params[:dj_id])
-    requests = dj.requests.order(:created_at => :desc)
+    requests = dj.requests.order(:created_at => :asc)
     render json: requests
   end
 
