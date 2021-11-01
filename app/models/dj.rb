@@ -4,6 +4,7 @@ class Dj < ApplicationRecord
   
   validates :email, presence: true, uniqueness: true
   validates :name, presence:true
+  validates :name, uniqueness: true
   validates :info, length: { maximum: 500 }
 
   has_many :requests

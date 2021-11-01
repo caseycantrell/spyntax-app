@@ -9,7 +9,8 @@ class DjsController < ApplicationController
       name: params[:name],
       email: params[:email],
       password: params[:password],
-      password_confirmation: params[:password_confirmation]
+      password_confirmation: params[:password_confirmation],
+      info: ""
     )
     if dj.save
       render json: dj

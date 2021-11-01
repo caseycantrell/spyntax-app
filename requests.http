@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MTMsImV4cCI6MTYzNTc5Mzg2NH0.3CZi294xUaZeznrss4bYqRVEL8jv7oN0GD-0EtS96o4
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJkal9pZCI6MTcsImV4cCI6MTYzNTg4NjI4NX0.QwXuDg4ftD4FTSkiqoyspQ8LnQ2wtlOFyyoFKSbK56U
 @hostname = http://localhost:3000
 
 ######################################### DJS
@@ -87,7 +87,7 @@ POST {{hostname}}/sessions
 Content-Type: application/json
 
   {
-    "email": "test@test.com",
+    "email": "robgeorge@gmail.com",
     "password": "password"
   }
 
