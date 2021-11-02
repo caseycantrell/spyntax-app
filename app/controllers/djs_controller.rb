@@ -6,7 +6,6 @@ class DjsController < ApplicationController
 
   def create
     dj = Dj.new(
-      name: params[:name],
       email: params[:email],
       password: params[:password],
       password_confirmation: params[:password_confirmation],

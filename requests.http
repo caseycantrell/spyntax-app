@@ -8,8 +8,7 @@ POST {{hostname}}/djs
 Content-Type: application/json
 
   {
-    "name": "test",
-    "email": "test@test.com",
+    "email": "test@gmail.com",
     "password": "password",
     "password_confirmation": "password"
   }
@@ -49,7 +48,7 @@ Authorization: Bearer {{jwt}}
 
 ### Requests Index
 
-GET {{hostname}}/requests?dj_id=3
+GET {{hostname}}/requests?dj_id=1
 
 
 
