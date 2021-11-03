@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'localhost:8080', 'spyntax.netlify.app', 'serato.com/playlists/DJ_SEEZ/11-3-21_2'
+    origins 'localhost:8080', 'spyntax.netlify.app'
 
     resource '*',
       headers: :any,
