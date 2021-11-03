@@ -16,6 +16,13 @@ class RequestsController < ApplicationController
       status: "pending",
     )
     if request.save
+      ActionCable.server.broadcast "requests_channel", {
+        song: request.song,
+        comments: request.comments,
+        dj_id: request.dj_id,
+        status: request.status,
+        created_at: request.created_at,
+      }
       render json: request
     else
       render json: { errors: request.errors.full_messages }, status: :bad_request
