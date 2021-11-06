@@ -18,6 +18,7 @@ class RequestsController < ApplicationController
     if request.save
       ActionCable.server.broadcast "requests_channel", {
         song: request.song,
+        id: request.id,
         comments: request.comments,
         dj_id: request.dj_id,
         status: request.status,
@@ -33,6 +34,10 @@ class RequestsController < ApplicationController
     request = current_dj.requests.find(params[:id])
     request.status = params[:status] || request.status
     if request.save
+      ActionCable.server.broadcast "requests_channel", {
+        id: request.id,
+        status: request.status
+      }
       render json: request
     else
       render json: request.errors.full_messages

@@ -38,6 +38,7 @@ class DjsController < ApplicationController
     dj.cashapp = params[:cashapp] || dj.cashapp
     dj.paypal = params[:paypal] || dj.paypal
     dj.email = params[:email] || dj.email
+    dj.serato_url = params[:serato_url] || dj.serato_url
       if dj.save
       render json: dj
       else
