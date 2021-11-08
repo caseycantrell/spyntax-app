@@ -26,11 +26,15 @@ class DjsController < ApplicationController
 
   
   def update
+    if params[:image_url]
+      response = Cloudinary::Uploader.upload(params[:image_url], resource_type: :auto)
+      cloudinary_url = response["secure_url"]
+    end
     dj = current_dj
     dj.name = params[:name] || dj.name
     dj.info = params[:info] || dj.info
     dj.website = params[:website] || dj.website
-    dj.image_url = params[:image_url] || dj.image_url
+    dj.image_url = cloudinary_url || dj.image_url
     dj.instagram = params[:instagram] || dj.instagram
     dj.twitter = params[:twitter] || dj.twitter
     dj.facebook = params[:facebook] || dj.facebook
