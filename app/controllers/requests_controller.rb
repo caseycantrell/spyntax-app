@@ -48,5 +48,6 @@ class RequestsController < ApplicationController
     current_dj.requests.destroy_all
     render json: { message: "Successfully obliterated all requests." }
   end
-
+  
 end
+
