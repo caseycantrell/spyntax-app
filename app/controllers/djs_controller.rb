@@ -9,7 +9,16 @@ class DjsController < ApplicationController
       email: params[:email],
       password: params[:password],
       password_confirmation: params[:password_confirmation],
-      info: ""
+      info: "",
+      website: "", 
+      image_url: "",  
+      instagram: "",  
+      twitter: "",  
+      facebook: "",  
+      venmo: "",  
+      cashapp: "",  
+      paypal: "",
+      serato_url: "", 
     )
     if dj.save
       render json: dj
