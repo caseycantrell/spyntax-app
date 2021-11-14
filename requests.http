@@ -84,9 +84,10 @@ Authorization: Bearer {{jwt}}
 
 POST {{hostname}}/sessions
 Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
   {
-    "email": "robgeorge@gmail.com",
+    "email": "emailcaseyrells@gmail.com",
     "password": "password"
   }
 
