@@ -235,7 +235,7 @@ DEPENDENCIES
   byebug
   cloudinary
   jwt
-  listen (~> 3.3)
+  listen
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
