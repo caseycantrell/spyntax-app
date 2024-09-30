@@ -7,7 +7,7 @@ class ApplicationController < ActionController::API
       begin
         decoded_token = JWT.decode(
           token,
-          Rails.application.credentials.fetch(:secret_key_base),
+          ENV['SECRET_KEY_BASE'], # Use the environment variable instead
           true,
           { algorithm: "HS256" }
         )
@@ -25,5 +25,3 @@ class ApplicationController < ActionController::API
   end
 
 end
-
-
