@@ -40,3 +40,9 @@ gem 'jwt'
 gem 'active_model_serializers', '~> 0.10.0'
 
 gem 'cloudinary'
+
+gem 'mutex_m'
+
+gem 'bigdecimal'
+
+gem 'dotenv-rails', groups: [:development, :test]
