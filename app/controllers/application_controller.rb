@@ -19,6 +19,7 @@ class ApplicationController < ActionController::API
   end
 
   def authenticate_dj
+    puts "Authorization Header: #{request.headers['Authorization']}"
     unless current_dj
       render json: {}, status: :unauthorized
     end
