@@ -9,6 +9,7 @@ class DjsController < ApplicationController
       email: params[:email],
       password: params[:password],
       password_confirmation: params[:password_confirmation],
+      name: "",
       info: "",
       website: "", 
       image_url: "",  
